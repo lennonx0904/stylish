@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135607378-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135607378-1');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/index_media_queries.css">
+        <link rel="stylesheet" href="./css/profile.css">
+        <title>STYLISH Member</title>
+        <meta name="title" content="STYLISH時尚衣著">
+        <meta name="description" content="stylish都會時尚購物網-提供你每一天的時尚玩美穿搭,上班族自信女裝,成熟魅力男裝,率性牛仔單品,各式百搭配件,打造百變時尚風格,官網現貨寄出不用等,每週與全省門市同步上新品。與STYLISH一起享受時尚玩美。">
+        <meta name="keywords" content="都會時尚女裝,成熟魅力男裝,率性時尚牛仔,優雅魅力洋裝,百搭配件">
+    </head>
+    <header>
+        <nav class="mainNav">
+            <a class="logoContainer" href="./index.html">
+                <img class="logo" src="./images/logo.png">
+            </a>
+            <div class="category">
+                <div class="categoryContainer">
+                    <div class="categoryContent women"><a href="./index.html?category=women">女裝</a></div>
+                    <div class="stick forMobile"></div>
+                    <div class="categoryContent men"><a href="./index.html?category=men">男裝</a></div>
+                    <div class="stick forMobile"></div>
+                    <div class="categoryContent accessories"><a href="./index.html?category=accessories">配件</a></div>
+                </div>
+            </div>
+            <div class="navIconsDiv">
+                <div class="searchInputDiv">
+                    <input class="searchInput forWeb" type="text">
+                    <img class="searchBtn" src="./images/search.png">
+                </div>
+                <a class="cartBtnContainer forWeb" href="./cart.html">
+                    <img class="cartBtn" src="./images/cart.png">
+                    <div class="numberInCart hidden"></div>
+                </a>
+                <a href="./profile.html">
+                    <img class="memberBtn forWeb" src="./images/member.png">
+                </a>
+            </div> 
+            <div class="base forWeb">
+            </div>
+        </nav>   <!-- /mainNav -->
+    </header>
+    <body>
+        <div class="searchToggleBox row-aling-item hidden">
+            <input class="searchInputForMobile" type="text">
+        </div>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                // for local host
+                // appId      : '353304045395673',
+                // for public
+                appId      : '409253516499233',
+                xfbml      : true,
+                version    : 'v3.2'
+                });
+                FB.AppEvents.logPageView();
+                checkLoginState();
+            };
+            
+            (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    <div class="profilePageContainer">
+        <div class='flexColumn row-aling-item'>
+            <div class="loginContainer hidden">
+                <p class="logInTitle">會員登入</p>
+                <fb:login-button 
+                class ="fbLogInBtn"
+                scope="public_profile,email"
+                onlogin="checkLoginState();">
+                </fb:login-button> 
+            </div>
+            <div class="userProfile hidden">
+                <div class="flex row-aling-item">
+                    <img class="userPhoto">
+                </div>
+                <p class="userName">  
+                </p>
+                <p class="userEmail">   
+                </p>
+            </div>
+            <button class="logoutBtn hidden" onclick="fbLogout();">登出</button>
+        </div>
+    </div>
+    </body>
+     
+    <footer>
+        <div class="footerContainer">
+            <div class="footerContextContainer">
+                    <div class="footerContext">關於Stylish</div>
+                    <div class="stick forWeb"></div>
+                    <div class="footerContext">服務條款</div>
+                    <div class="stick forWeb"></div>
+                    <div class="footerContext">隱私政策</div>
+                    <div class="stick forWeb"></div>
+                    <div class="footerContext">聯絡我們</div>
+                    <div class="stick forWeb"></div>
+                    <div class="footerContext">FAQ</div>
+            </div>          
+            <div class="footerIconsDiv">
+                <img class="lineBtn" src="./images/line.png">
+                <img class="twitterBtn" src="./images/twitter.png">
+                <img class="facebookBtn" src="./images/facebook.png">
+            </div>
+            <div class="footerCopyRight">
+                © 2018. All rights reserved.
+            </div>     
+        </div>
+    </footer>
+     <!-- /pageWrap -->
+    <div class="stickyContainer">
+        <div class="cartContainer">
+            <a class="cartBtnContainer" href="./cart.html">
+                <img class="cartBtn" src="./images/cart-mobile.png">
+                <div class="numberInCart "></div>
+            </a>
+            <div>購物車</div>
+        </div>
+        <div class="stick" style="height: 24px;"></div>
+        <div class="memberContainer">
+            <div class="memberBtnContainer">
+                <img class="memberBtn" src="./images/member-mobile.png">
+            </div>
+            <div>會員</div>
+        </div>
+    </div>
+    <script src="./js/nav.js"></script>
+    <script src="./js/fb.js"></script>
+</html>

@@ -1,0 +1,395 @@
+@media (min-width: 1200px) {
+    /* navigation */
+        
+    .category {
+        display: flex;
+        margin: 44px auto 28px 3%;
+    }
+    
+    .categoryContent {
+        width: 110px;
+        margin-left: 34px;
+        display: inline-block;
+        font-size: 20px;
+        letter-spacing: 30px;
+        text-align: left;
+        color: #3f3a3a;
+        border-right: 1px solid #3f3a3a;
+    }
+
+    .categoryContainer > :last-child {
+        border: 0;
+    }
+
+    .categoryContent:hover,
+    .categoryContent:active,
+    .current {
+        color: #8b572a;
+        opacity: 0.9;
+    }
+    
+    .navIconsDiv {
+        display: flex;
+        align-self: center;
+        margin-right: 2.8%;
+        margin-top: 25px;
+    }
+    
+    .searchBtn,
+    .cartBtn,
+    .memberBtn {
+        height: 44px;
+        width: 44px;
+    }
+    
+    .searchInputDiv {
+        position: relative;
+        margin-left: 0;
+    }
+    
+    .searchInput {
+        width: 214px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 20px;
+        padding-left: 15px;
+        border-style: groove;
+    }
+    
+    .searchBtn {
+        position: absolute;
+        right: 5px;
+        top: -2px;
+      }
+    
+    .cartBtnContainer {
+        position: relative;
+        margin: 0 42px;
+    }
+    
+    .numberInCart {
+        width: 24px;
+        height: 24px; 
+        background-color: #8b572a;
+        color: white;
+        border-radius: 50%;
+        font-size: 18px;
+        position: absolute;
+        margin: 0;
+        top: 16px;
+        left: 22px;
+        text-align: center;
+    }
+    
+    /* footer */
+
+    .footerContextContainer {
+        display: flex;  
+        padding-left: 0; 
+        margin-right: auto;
+    }
+    
+    .footerContext {
+        list-style: none;
+        display: inline-block;
+        width: 133px;
+        height: 29px;
+        color: #f5f5f5;
+        text-align: center;
+    }
+    
+    .stick {
+        width: 1px;
+        height: 22px;
+        background-color: #828282;
+    }
+
+    .footerIconsDiv {
+        width: 20.69%;
+        display: flex;
+    }
+    
+    .footerCopyRight {
+        margin-left: 15px;
+    }
+    
+    /* .stickyContainer {
+        display: none;
+    } */
+    
+}
+
+
+
+@media (max-width: 1199px) {
+
+.forMobile {
+    display: block;
+}
+.forWeb {
+    display: none;
+}
+
+.mainNav {
+    height: 52px;
+    flex-wrap: wrap;
+}
+
+.logoContainer {
+    width: 130px;
+    height: auto;
+    margin: 14px auto 9px;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+.searchBtn {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position: fixed;
+    top: 8px;
+    right: 10px;
+  }
+
+ .searchToggleBox{
+    width: 100%;
+    height: 50px;
+    margin-top: 52px;
+    background-color: var(--charcoal-grey);
+    position: fixed;
+    top: 0;
+    z-index: 101; 
+ }
+
+.searchInputForMobile {
+    height: 30px;
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: auto;
+}
+
+
+/* 商品分類 */
+.category {
+    width: 100%;
+    height: 50px;
+    background-color: var(--charcoal-grey);
+    display: flex;
+}
+
+.categoryContainer {
+    width: 86.6%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.categoryContent {
+    width: 32px;
+    height: 22px;
+    font-family: PingFangTC;
+    font-size: 16px;
+    text-align: left;
+    color: #828282;
+    margin: auto;
+  }
+
+.categoryContent:hover,
+.categoryContent:active,
+.current {
+    color: #ffffff;
+}
+
+.stick {
+    width: 1px;
+    height: 22px;
+    background-color: #828282;
+}
+
+.banner {
+    width: 100%;
+    height: 185px;
+    margin: 102px 0 15px;
+    background-color: #d8d8d8;
+    position: relative;
+}
+
+.bannerText {
+    font-size: 14px;
+    position: absolute;
+    top: 19.46%;
+    left: 6.4%;
+}
+
+.bannerTitle {
+    font-size: 9px;
+}
+
+.bannerSelector {
+    width: 56px;
+    height: 4px;
+    margin: 163px auto 0;
+    display: flex;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border: 1px solid #ffffff;
+}
+
+/* 商品資訊 */
+
+.bodyContainer {
+    width: 88.34%;
+}
+
+.productContainer {
+    width: 48.11%;
+    margin: 0 0.94%;
+}
+
+.productDetails {
+    width: 100%;
+    height: 90px;
+}
+
+.procductColor {
+    padding: 8px 0 10px;
+}
+
+.colorBox {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+}
+
+.procductName {
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    max-height: 14px;
+    margin-bottom: 8px;
+}
+
+.procductPrice {
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    max-height: 14px;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 148px;
+    display: flex;
+}
+
+.footerContainer {
+    width: 86.667%;
+    height: 148px;
+}
+
+.footerContextContainer {
+    flex-wrap: wrap;    
+    flex-direction: column;
+    padding-left: 4.445%;
+    width: 67.28%;
+    height: 102px;
+}
+
+.footerContext{
+    font-size: 14px;
+    text-align: left;
+    padding: 4px 0;
+    max-width: 112px;
+}
+
+
+.footerIconsDiv {
+    width: 32.71%;
+}
+
+.footerIconsDiv img {
+    width: 19.6%;
+    height: 19.6%;
+    margin-left: 13.725%;
+}
+
+.footerCopyRight {
+    height: 14px;
+    margin: auto;
+}
+
+/* sticky cart and member div */
+.stickyContainer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: var(--charcoal-grey);
+    position: fixed;
+    z-index: 100;
+}
+
+.cartContainer,
+.memberContainer {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: PingFangTC;
+    font-size: 16px;
+    text-align: left;
+    color: #ffffff;
+    background-color: var(--charcoal-grey);
+}
+
+.cartBtn,
+.memberBtn {
+    width: 30px;
+    height: 30px;
+}
+
+.cartBtnContainer {
+    position: relative;
+    /* margin: 0 42px; */
+}
+.cartBtnContainer,
+.memberBtnContainer {
+    width: 30px;
+    height: 30px;
+}
+
+.numberInCart {
+    width: 20px;
+    height: 20px;
+    background-color: #8b572a;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    margin: 0;
+    bottom: 1px;
+    left: -8px;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* .bodyWrapper {
+    max-height: calc(100vh - 162px);
+} */
+.bodyWrapper {
+    max-height: calc(100vh - 162px);
+    margin-top: 102px;
+}
+
+
+}

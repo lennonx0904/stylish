@@ -1,0 +1,186 @@
+
+/*  body page  */
+
+.bodyContainer {
+    /* width: 50%; */
+    width: 960px;
+    margin: 205px auto 0;
+
+}
+
+/* mainDetail */
+.productDetailTitle {
+    height: 38px;
+    font-size: 32px;
+    letter-spacing: 6.4px;
+    color: #3f3a3a;
+}
+
+.productDetailId {
+    height: 24px;
+    font-size: 20px;    
+    letter-spacing: 4px;
+    color: #bababa;
+    margin: 16px auto 40px 0;
+}
+
+.productDetailPrice {
+    height: 36px;
+    font-size: 30px;
+    color: #3f3a3a;
+    margin-bottom: 20px;
+}
+
+.saperateLine {
+    width: 100%;
+    height: 1px;
+    background-color: #3f3a3a;
+}
+
+/* selectForm */
+.colorsRow,
+.sizesRow,
+.quantitiesRow {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: left;
+    color: #3f3a3a;
+    align-items: center;
+}
+
+.stick {
+    margin: 0 32px 0 12px;
+}
+
+.colorBoxContainer,
+.sizeBoxContainer {
+    display: flex;
+}
+
+
+
+/* Color Selector */
+.colorsRow {
+    margin: 30px 0;
+}
+
+.colorBoxBorder {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    margin-right: 15px;
+}
+
+.colorBoxSelected {
+    border: 1px solid #979797;
+}
+
+.colorBox {
+    width: 24px;
+    height: 24px;
+    background-color: var(--sepia);
+    margin: auto;
+}
+
+/* Size Selector */
+.sizeBox {
+    width: 34px;
+    height: 34px;
+    background-color: #ececec;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 34px;
+    letter-spacing: normal;
+    color: var(--black);
+}
+
+.sizeBoxSelected {
+    background-color: var(--black);
+    color: #ffffff;
+}
+
+/* quantities Selector */
+.quantitiesRow {
+    margin: 26px 0 29px;
+}
+
+.quantitiesSelectBox {
+    position: relative;
+}
+
+.quantitiesValue {
+    width: 160px;
+    height: 44px;
+    border: 1px solid #979797;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--sepia);
+}
+
+.quantitiesMinusBtn {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    padding: 14px 10px;
+}
+.quantitiesPlusBtn {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    padding: 14px 10px;
+}
+
+
+.addToCartBtn {
+    width: 100%;
+    height: 60px;
+    background-color: var(--black);
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-align: center;
+    /* 垂直置中把行高與div設為同樣高度 */
+    line-height: 60px;  
+}
+
+/* 細部說明字樣、分隔線*/
+.seperateRow {
+    margin: 50.3px 0 0;
+}
+
+.saperateText {  
+    width: 96px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    text-align: left;
+    color: var(--sepia);
+}
+
+.saperateLine1 {
+    width: 83.33%;    
+}
+
+/*  more details below */
+
+.productDetailStory {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 30px 0;
+    text-align: left;
+    color: #3f3a3a;
+}
+
+.productDetailImg {
+    width: 100%;
+    margin: 30px 0;
+}
+
+
+

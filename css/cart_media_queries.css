@@ -1,0 +1,208 @@
+@media (min-width: 1200px) {
+    .cartTable{
+        width: 1160px;
+        border: solid 1px #e8e8e8;
+    }    
+    .cartTitle {
+        margin: 51px 0 16px;
+    }
+    .flexRowInCart {
+        margin: 30px;
+    }
+    .flexItem2 {
+        width: 578px;
+        margin-right: 50px;
+        margin-left: auto;
+    }
+    .row-gray {
+        width: 1160px;
+        height: 74px;
+        background-color: #e8e8e8;
+        padding-left: 30px;
+        margin: 26px 0 20px;
+    }
+    .deliveryTime > span {
+        margin-right: 30px;
+    }
+    .deliveryTime {
+        margin-left: 52px;
+    }
+    .form-1 {
+        display: inline-block;
+        margin: 0 82px 0 20px;
+        width: 171px;
+        height: 30px;
+        border-radius: 8px;
+        border: solid 1px #979797;
+        background-color: #f3f3f3;
+    }
+    .deliveryLocation,
+    .paymentTerm{
+        width: 171px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .forMobile {
+        display: block;
+    }
+    .forWeb {
+        display: none;
+    }
+    .text-1 {
+        font-size: 14px;
+    }
+    .bodyContainer {
+        width: 86.67%;
+        margin: 102px auto 0;
+        padding: 0;
+    }
+    .cartTitle {
+        width: 100%;
+        margin-top: 17px;
+    }
+    .qtyInCart {
+        width: 100%;
+        margin-right: auto; 
+    }
+    .cartTable {
+        width: 100%;   
+    }
+    .cartTable::before {
+        width: 100%;
+        height: 1px;
+        background-color: #3f3a3a;
+        content: '';
+        display: block;
+        margin: 10px 0;
+    }
+
+    .flexRowInCart {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .flexRowInCart::after {
+        width: 100%;
+        height: 1px;
+        background-color: #3f3a3a;
+        content: '';
+        display: block;
+        margin: 20px 0;
+    }
+
+    .cartProductImgContainer,
+    .cartDetailsContainer {
+        width: 114px;
+        margin-right: 10px;
+    }
+    .deleteBtnContainer {
+        position: absolute;
+        top: -10px;
+        right: 0;
+    }
+
+    .flexItem2 {
+        width: 100%;
+    }
+
+
+    /* cart table end  ⬆︎ */
+
+    .row-gray {
+        width: 100%;
+        height: 164px;
+        padding: 0 10px;
+        background-color: #e8e8e8;
+        margin-bottom: 10px;
+    }
+    .info-title {
+        margin-top: 20px;
+    }
+
+    .info-title::after {
+        margin-top: 10px;
+    }
+    .deliveryLocationContainer,
+    .paymentTermContainer {
+        width: 100%;
+    }
+    .form-1 {
+        width: 292px;
+        height: 30px;
+        border-radius: 8px;
+        border: solid 1px #979797;
+        background-color: #f3f3f3;
+    }
+    .deliveryLocation,
+    .paymentTerm{
+        width: 292px;
+        height: 30px;
+    }
+    /* 訂購資料 */
+
+    .subscriberInfo {
+        display: flex;
+        flex-direction: column;
+    }
+    .infoInputBox {
+        width: 100%;
+    }
+    .subscriberName,
+    .subscriberPhone,
+    .subscriberEmail,
+    .subscriberAdd,
+    .deliveryTime {
+        margin: 10px 0 0;
+    }
+    .deliveryTime {
+        display: flex;
+        justify-content: space-between;
+        max-width: 500px;
+    }
+    .subscriberInfo {
+        width: 100%
+    }
+    .subscriberNameRow {
+        margin-top: 20px;
+    }
+    .subscriberNameRow::after {
+        width: 100%;
+        font-size: 14px;
+        color: var(--sepia);
+        content: '務必填寫完整收件人姓名，避免包裹無法順利簽收';
+        display: block;
+        margin: 6px 0 20px;
+    }
+    .subscriberEmailRow{
+        margin: 20px 0 0;
+
+    }
+    .subscriberAddRow {
+        margin: 20px 0;
+    }
+    .deliveryTimeRow {
+        margin-bottom: 0;
+    }
+    .totalChargeContainer {
+        width: 200px;
+        margin: 24px 0 0 auto;
+    }
+    .text-2 {
+        margin-left: 10px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        height: 44px;
+        border: solid 1px var(--black);
+        background-color: var(--black);
+        font-size: 16px; 
+        line-height: 1.88;
+        letter-spacing: 3.2px;  
+        color: #ffffff;
+        margin-bottom: 28px;
+    }
+}

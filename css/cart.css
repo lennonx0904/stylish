@@ -1,0 +1,188 @@
+.text-1 {
+  font-family: NotoSansCJKtc;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f3a3a;
+}
+
+.bodyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 60.42%; */
+    width: 1160px;
+    margin: auto;
+    margin-top: 140px;
+    padding-top: 47px;
+}
+
+.qtyInCart {
+    margin-right: 510px;
+    font-weight: bold;
+}
+.titleQty {
+    margin-right: 145px;
+}
+.titlePrice {
+    margin-right: 137px;
+}
+
+.cartProductImgContainer {
+    width: 114px;
+    margin-right: 20px;
+}
+
+.cartProductImg{
+    width: 100%;
+}
+
+.cartProductName {
+    margin: 0 0 18px;
+}
+.cartProductId {
+    margin: 0 0 22px;
+}
+.cartProductSize{
+    margin: 10px 0;
+}
+
+.cartQtyValue {
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.reminder {
+    line-height: 1.63;
+}
+.info-title {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.info-title::after {
+    width: 100%;
+    height: 1px;
+    background-color: #3f3a3a;
+    content: '';
+    display: block;
+    margin-top: 16px;
+}
+
+.infoInputBox {
+    width: 574px;
+    height: 30px;
+    border-radius: 8px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+    display: inline-block;
+    padding-left: 8px;
+}
+
+.deliveryTime {
+    display: inline-block;
+}
+
+.subscriberNameRow {
+    margin-top: 25px;
+}
+
+.subscriberName {
+    margin-left: 30px;
+}
+
+.subscriberNameRow::after {
+    width: 352px;
+    height: 19px;
+    font-size: 16px;
+    color: var(--sepia);
+    content: '務必填寫完整收件人姓名，避免包裹無法順利簽收';
+    display: block;
+    margin: 10px 0 30px 337.688px;
+}
+
+.subscriberPhone,
+.subscriberAdd {
+    margin-left: 78px;
+}
+.subscriberEmail{
+    margin-left: 60px;
+}
+.subscriberAddRow,
+.subscriberEmailRow {
+    margin: 30px 0;
+}
+
+.deliveryTimeRow {
+    margin-bottom: 37px;
+}
+
+.totalChargeContainer {
+    width: 240px;
+    margin: 40px 0 148px auto;
+}
+
+.chargeTitle {
+    margin-right: auto;
+}
+
+.totalChargeContainer div {
+    height: 36px;
+    line-height: 36px;
+}
+
+.separateLine {
+    width: 100%;
+    height: 1px;
+    background-color: #3f3a3a;
+    margin: 20px 0;
+}
+
+.text-2 {
+    font-size: 30px;
+    text-align: right;
+    color: #3f3a3a;
+}
+
+.totalPriceRow,
+.deliveryFeeRow {
+    margin-bottom: 20px;
+}
+.totalChargeRow {
+    margin: 20px 0 50px;
+}
+
+.submitBtn {
+    width: 240px;
+    height: 60px;
+    border: solid 1px #979797;
+    background-color: var(--black);
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+/* TapPay Info */
+.tpfield {
+    height: 40px;
+    width: 300px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+}
+.errorMessage {
+    color: red;
+    font-size: 14px;
+}
+
+.submitBtn.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}

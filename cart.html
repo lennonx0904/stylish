@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135607378-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135607378-1');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/index_media_queries.css">
+        <link rel="stylesheet" href="./css/cart.css">
+        <link rel="stylesheet" href="./css/cart_media_queries.css">
+        <title>STYLISH Cart</title>
+        <meta name="title" content="STYLISH時尚衣著">
+        <meta name="description" content="stylish都會時尚購物網-提供你每一天的時尚玩美穿搭,上班族自信女裝,成熟魅力男裝,率性牛仔單品,各式百搭配件,打造百變時尚風格,官網現貨寄出不用等,每週與全省門市同步上新品。與STYLISH一起享受時尚玩美。">
+        <meta name="keywords" content="都會時尚女裝,成熟魅力男裝,率性時尚牛仔,優雅魅力洋裝,百搭配件">
+    </head>
+        <header>
+            <nav class="mainNav">
+                <a class="logoContainer" href="./index.html">
+                    <img class="logo" src="./images/logo.png">
+                </a>
+                <div class="category">
+                    <div class="categoryContainer">
+                        <div class="categoryContent women"><a href="./index.html?category=women">女裝</a></div>
+                        <div class="stick forMobile"></div>
+                        <div class="categoryContent men"><a href="./index.html?category=men">男裝</a></div>
+                        <div class="stick forMobile"></div>
+                        <div class="categoryContent accessories"><a href="./index.html?category=accessories">配件</a></div>
+                    </div>
+                </div>
+                <div class="navIconsDiv">
+                    <div class="searchInputDiv">
+                        <input class="searchInput forWeb" type="text">
+                        <img class="searchBtn" src="./images/search.png">
+                    </div>
+                    <a class="cartBtnContainer forWeb" href="./cart.html">
+                        <img class="cartBtn" src="./images/cart.png">
+                        <div class="numberInCart hidden"></div>
+                    </a>
+                    <a href="./profile.html">
+                        <img class="memberBtn forWeb" src="./images/member.png">
+                    </a>
+                </div> 
+                <div class="base forWeb">
+                </div>
+            </nav>   <!-- /mainNav -->
+        </header>
+        <body>
+            <div class="searchToggleBox row-aling-item hidden">
+                <input class="searchInputForMobile" type="text">
+            </div>
+            <div class="bodyWrapper">
+            <!-- 商品資訊 -->
+            <div class="bodyContainer">
+                <div class="text-1 row forWeb">HOME>BAG</div>
+                
+                <div class="cartTitle flexRow text-1">
+                    <p class="qtyInCart">購物車(0)</p>
+                    <p class="titleQty forWeb">數量</p>
+                    <p class="titlePrice forWeb">單價</p>
+                    <p class="titleSubTotal forWeb">小計</p>
+                </div>
+
+                <div class="cartTable">
+                   
+                </div>
+                <div class="flexRow row-aling-item flexWrap row-gray">  <!-- 配送國家及付款方式選單 -->
+                    <div class="deliveryLocationContainer">
+                        <span class="text-1">配送國家</span>
+                        <form class="form-1">
+                            <select class="deliveryLocation">
+                                <option value="taiwan">臺灣及離島</option>
+                                <option value="others">其他國家</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="paymentTermContainer">
+                        <span class="text-1">付款方式</span>
+                        <form class="form-1">
+                            <select class="paymentTerm">
+                                <option value="credit_card">信用卡付款</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>     <!-- END 配送國家及付款方式選單 END-->
+                <div class='reminder text-1 flexRow'>
+                    ※提醒您：<br />
+                    ●選擇宅配-請填寫正確收件人資訊，避免包裹配送不達<br />
+                    ●選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取
+                </div>
+                <div class="text-1 info-title">訂購資料</div>
+                <from class="subscriberInfo">
+                    <div class="subscriberNameRow">
+                        <span>收件人姓名</span>
+                        <input class="subscriberName infoInputBox" type='text'>
+                        <span><i class="nameError errorMessage hidden">請填寫收件人姓名</i></span>
+                    </div>
+                    <div class="subscriberPhoneRow">
+                        <span>手機</span>
+                        <input class="subscriberPhone infoInputBox" type='number' placeholder='不需填寫數字以外字元'>
+                        <span><i class="phoneError errorMessage hidden">請填寫正確手機格式</i></span>
+                    </div>
+                    <div class="subscriberEmailRow">
+                        <span>E-mail</span>
+                        <input class="subscriberEmail infoInputBox" type='text'>
+                        <span><i class="emailError errorMessage hidden">請填寫正確E-mail格式</i></span>
+                        </div>
+                    <div class="subscriberAddRow">
+                        <span>地址</span>
+                        <input class="subscriberAdd infoInputBox" type='text'>
+                        <span><i class="addError errorMessage hidden">請填寫正確地址格式</i></span>
+                    </div>
+                    <div class="deliveryTimeRow">
+                        <span>配送時間</span>
+                        <form class="deliveryTime">
+                            <span>
+                                <input type="radio" value="morning" name="time">
+                                <label class="text-1">08:00-12:00</label>
+                            </span>
+                            <span>
+                                <input type="radio" value="afternoon" name="time">
+                                <label class="text-1">14:00-18:00</label>
+                            </span>
+                            <span>
+                                <input type="radio" value="anytime" name="time">
+                                <label class="text-1">不指定</label>
+                            </span>
+                        </form>
+                        <span><i class="timeError errorMessage hidden">請選擇配送時間</i></span>
+                    </div>
+                </from>
+                <p class="separateLine"></p>
+                
+                <div class="text-1">  <!-- TapPay Info Start-->
+                    <div>信用卡號碼 
+                        <i class="cardNumberError errorMessage hidden">請填寫正確信用卡號碼</i>
+                    </div>
+                    <div class="tpfield" id="card-number"></div>
+                    
+                    <div>有效日期
+                            <i class="cardExpiryError errorMessage hidden">請填寫正確有效日期</i>
+                    </div>
+                    <div class="tpfield" id="card-expiration-date"></div>
+                    <div>安全碼
+                            <i class="cardCCVError errorMessage hidden">請填寫正確安全碼</i>
+                    </div>
+                    <div class="tpfield" id="card-ccv"></div>
+                    
+                </div>  <!-- TapPay Info End-->
+
+                <p class="separateLine"></p>
+                <!-- 總金額確認付款 -->
+                <div class="flexRow last-flexRow">
+                    <div class="flexColumn totalChargeContainer">
+                        <div class="flexRow row-space-between totalPriceRow">
+                            <div class="text-1 chargeTitle">總金額</div>
+                            <div class="text-1">NT.</div>
+                            <div class="totalPrice text-2">0</div>
+                        </div>
+                        <div class="flexRow row-space-between deliveryFeeRow">
+                            <div class="text-1 chargeTitle">運費</div>
+                            <div class="text-1">NT.</div>
+                            <div class="deliveryFee text-2">0</div>
+                        </div>
+                        <p class="separateLine"></p>
+                        <div class="flexRow row-space-between totalChargeRow">
+                            <div class="text-1 chargeTitle">應付金額</div>
+                            <div class="text-1">NT.</div> 
+                            <div class="totalCharge text-2">0</div>
+                        </div>
+                        <button class="submitBtn forWeb disabled" type="submit" onclick="onSubmit(event)">
+                            確認付款
+                        </button>
+                    </div>
+                </div>
+                <!-- 總金額確認付款 web -->
+                <!-- Mobile Btn -->
+                <button class="submitBtn forMobile disabled" type="submit" onclick="onSubmit(event)">
+                        確認付款
+                </button>
+            </div>
+        </body>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerContextContainer">
+                        <div class="footerContext">關於Stylish</div>
+                        <div class="stick forWeb"></div>
+                        <div class="footerContext">服務條款</div>
+                        <div class="stick forWeb"></div>
+                        <div class="footerContext">隱私政策</div>
+                        <div class="stick forWeb"></div>
+                        <div class="footerContext">聯絡我們</div>
+                        <div class="stick forWeb"></div>
+                        <div class="footerContext">FAQ</div>
+                </div>          
+                <div class="footerIconsDiv">
+                    <img class="lineBtn" src="./images/line.png">
+                    <img class="twitterBtn" src="./images/twitter.png">
+                    <img class="facebookBtn" src="./images/facebook.png">
+                </div>
+                <div class="footerCopyRight">
+                    © 2018. All rights reserved.
+                </div>     
+            </div>
+        </footer>
+    </div> <!-- /pageWrap -->
+    <div class="stickyContainer">
+        <div class="cartContainer">
+            <a class="cartBtnContainer" href="./cart.html">
+                <img class="cartBtn" src="./images/cart-mobile.png">
+                <div class="numberInCart "></div>
+            </a>
+            <div>購物車</div>
+        </div>
+        <div class="stick" style="height: 24px;"></div>
+        <div class="memberContainer">
+            <a class="memberBtnContainer" href="./profile.html">
+                <img class="memberBtn" src="./images/member-mobile.png">
+            </a>
+            <div>會員</div>
+        </div>
+    </div>
+           
+    <script src="./js/api.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+    <script src="./js/checkout.js"></script>
+   
+</html>

@@ -1,0 +1,55 @@
+.profilePageContainer {
+    margin: 140px auto 0;
+    width: 80%;
+    padding-bottom: 30%;
+}
+
+.logInContainer {
+    padding: 30px;
+}
+
+.logInTitle{
+    font-size: 20px;
+}
+
+.userProfile {
+    border: 1px solid #3f3a3a;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 100px;
+}
+.userPhoto {
+    margin: auto;
+    border: 1px solid #3f3a3a;
+    border-radius: 50%;
+}
+
+.userName,
+.userEmail {
+    font-size: 16px;
+    color: #3f3a3a;
+    text-align: center;
+
+}
+
+.logoutBtn {
+    width: 120px;
+    font-size: 24px;
+    background-color:#3f3a3a;
+    color: white;
+}
+
+
+@media (min-width: 1200px) {
+    footer {
+    position: fixed;
+    bottom: 0;
+    } 
+}
+
+@media (max-width: 1199px) {
+
+    .userProfile {
+        margin: 50px;
+    }
+}
