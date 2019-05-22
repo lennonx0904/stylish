@@ -6,21 +6,49 @@ const qtyInCart = document.querySelector(".qtyInCart");
 const totalPrice = document.querySelector(".totalPrice");
 const deliveryFee = document.querySelector(".deliveryFee");
 const totalCharge = document.querySelector(".totalCharge");
-const cartQtyValue = document.getElementsByClassName("cartQtyValue");
-const deleteBtnForWeb = document.getElementsByClassName("deleteBtnForWeb");
-const deleteBtnForMobile = document.getElementsByClassName(
-  "deleteBtnForMobile"
-);
-
 let curDeliveryFee = 100;
 
-//  ------- 待解決：還不能建立能重複使用的Node，只能用在最下層
+const changeQty = () => {
+  const cartQtyValue = document.querySelectorAll(".cartQtyValue");
+  cartQtyValue.forEach((e, i) => {
+    e.addEventListener("change", () => {
+      const curQty = cartQtyValue[i].value;
+      dataInCart[i].qty = Number(curQty);
+      localStorage.cart = JSON.stringify(dataInCart);
+      printCart();
+    });
+  });
+};
+
+const deleteRowForWeb = () => {
+  const deleteBtnForWeb = document.querySelectorAll(".deleteBtnForWeb");
+  deleteBtnForWeb.forEach((e, i) => {
+    e.addEventListener("click", () => {
+      dataInCart.splice(i, 1);
+      localStorage.cart = JSON.stringify(dataInCart);
+      printCart();
+      getLocalStorage();
+    });
+  });
+};
+
+const deleteRowForMobile = () => {
+  const deleteBtnForMobile = document.querySelectorAll(".deleteBtnForMobile");
+  deleteBtnForMobile.forEach((e, i) => {
+    e.addEventListener("click", () => {
+      dataInCart.splice(i, 1);
+      localStorage.cart = JSON.stringify(dataInCart);
+      printCart();
+      getLocalStorage();
+    });
+  });
+};
+
 const createElement = (tagName, className, content, parentNode) => {
   const element = document.createElement(tagName);
   element.setAttribute("class", className);
   element.appendChild(document.createTextNode(content));
   parentNode.appendChild(element);
-  //newNode = document.getElementsByClassName(calssName)[0];
 };
 
 const printCart = () => {
@@ -96,7 +124,7 @@ const printCart = () => {
     for (let i = 1; i <= item.stock; i++) {
       const option = document.createElement("option");
       option.setAttribute("value", i);
-      if (i == item.qty) {
+      if (i === item.qty) {
         option.setAttribute("selected", "selcted");
       }
       option.appendChild(document.createTextNode(i));
@@ -149,38 +177,3 @@ const printCart = () => {
 };
 
 printCart();
-
-// 更改數量
-const changeQty = () => {
-  for (let i = 0; i < dataInCart.length; i++) {
-    cartQtyValue[i].addEventListener("change", () => {
-      const curQty = cartQtyValue[i].value;
-      dataInCart[i].qty = Number(curQty);
-      localStorage.cart = JSON.stringify(dataInCart);
-      printCart();
-    });
-  }
-};
-
-// 刪除列
-const deleteRowForWeb = () => {
-  for (let i = 0; i < dataInCart.length; i++) {
-    deleteBtnForWeb[i].addEventListener("click", () => {
-      dataInCart.splice(i, 1);
-      localStorage.cart = JSON.stringify(dataInCart);
-      printCart();
-      getLocalStorage();
-    });
-  }
-};
-
-const deleteRowForMobile = () => {
-  for (let i = 0; i < dataInCart.length; i++) {
-    deleteBtnForMobile[i].addEventListener("click", () => {
-      dataInCart.splice(i, 1);
-      localStorage.cart = JSON.stringify(dataInCart);
-      printCart();
-      getLocalStorage();
-    });
-  }
-};
