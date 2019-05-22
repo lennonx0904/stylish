@@ -199,7 +199,6 @@ const bannerRender = (foo, index) => {
 };
 
 //  點擊換頁功能
-
 bannerSelector.addEventListener("click", e => {
   if (e.target.classList.contains("dot")) {
     for (let i = 0; i < bannerDots.length; i++) {
@@ -209,19 +208,17 @@ bannerSelector.addEventListener("click", e => {
     bannerIndex = e.target.classList[1].slice(3);
     getMarketingCampaigns().then(foo => {
       bannerRender(foo, bannerIndex);
-      return (bannerIndex = Number(e.target.classList[1].slice(3)));
     });
   }
 });
 
 // 輪播功能
-
 getMarketingCampaigns().then(foo => {
   bannerRender(foo, bannerIndex);
   bannerDots[bannerIndex].classList.add("dotCliked");
   setInterval(() => {
     if (bannerIndex < foo.data.length - 1) {
-      bannerIndex += 1;
+      bannerIndex++;
     } else {
       bannerIndex = 0;
     }

@@ -39,7 +39,7 @@ const post = (api, data) => {
     xhr.setRequestHeader("Authorization", `Bearer ${localStorage.accessToken}`);
     xhr.send(JSON.stringify(data));
     xhr.onload = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
+      if (xhr.readyState === 4 && xhr.status === 200) {
         resolve(JSON.parse(this.responseText));
       }
     };

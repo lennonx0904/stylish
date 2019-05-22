@@ -119,7 +119,7 @@ const tpfield = document.querySelectorAll(".tpfield");
 
 const checkName = () => {
   const nameError = document.querySelector(".nameError");
-  if (subscriberName.value == "") {
+  if (subscriberName.value === "") {
     nameError.classList.remove("hidden");
     return false;
   } else {
@@ -165,7 +165,7 @@ const checkAdd = () => {
 
 const checkdeliveryTime = () => {
   const timeError = document.querySelector(".timeError");
-  if (document.querySelector('input[name="time"]:checked') == null) {
+  if (document.querySelector('input[name="time"]:checked') === null) {
     timeError.classList.remove("hidden");
     return false;
   } else {

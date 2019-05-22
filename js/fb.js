@@ -6,7 +6,7 @@ const userEmail = document.querySelector(".userEmail");
 const logoutBtn = document.querySelector(".logoutBtn");
 
 const checkLoginState = () => {
-  FB.getLoginStatus(function(response) {
+  FB.getLoginStatus(response => {
     if (response.status === "connected") {
       console.log("connected");
       console.log(response);
@@ -34,7 +34,7 @@ const checkLoginState = () => {
 };
 
 const fbLogout = () => {
-  FB.getLoginStatus(function(response) {
+  FB.getLoginStatus(response => {
     if (response.status === "connected") {
       FB.logout(function(response) {
         console.log("log out");
@@ -57,7 +57,7 @@ const getFB = api => {
     xhr.open("GET", api);
     xhr.send();
     xhr.onload = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
+      if (xhr.readyState === 4 && xhr.status === 200) {
         resolve(JSON.parse(this.responseText));
       }
     };
