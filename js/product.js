@@ -107,7 +107,7 @@ getProductDetails(id).then(foo => {
 // wee2 part3 --  Handle Product Variants
 
 const getCurStockList = stockList => {
-  return stockList.color_code == curColorCode && stockList.size == curSize;
+  return stockList.color_code === curColorCode && stockList.size === curSize;
 };
 
 selectForm.addEventListener("click", e => {
@@ -119,8 +119,6 @@ selectForm.addEventListener("click", e => {
     curColorCode = e.target.getAttribute("colorCode");
     curColorName = e.target.getAttribute("colorName");
     addToCartBtn.classList.remove("preventClicked");
-    addToCartBtn.innerHTML = "加入購物車";
-
     curQuantity = 1;
     quantitiesValue.value = 1;
   }
@@ -131,50 +129,44 @@ selectForm.addEventListener("click", e => {
     e.target.classList.add("sizeBoxSelected");
     curSize = e.target.innerHTML;
     addToCartBtn.classList.remove("preventClicked");
-    addToCartBtn.innerHTML = "加入購物車";
     curQuantity = 1;
     quantitiesValue.value = 1;
   }
   const curStockIndex = stockList.findIndex(getCurStockList);
-  if (curStockIndex != -1) {
-    const curProductStockQty = stockList[curStockIndex].stock;
-    if (stockList[curStockIndex].stock == 0) {
-      curQuantity = 0;
-      quantitiesValue.value = 0;
-      return;
-    } else {
-      if (e.target.classList.contains("quantitiesPlusBtn")) {
-        if (curQuantity == curProductStockQty) return;
-        addToCartBtn.classList.remove("preventClicked");
-        addToCartBtn.innerHTML = "加入購物車";
-        curQuantity += 1;
-        quantitiesValue.value = curQuantity;
-      }
-      if (e.target.classList.contains("quantitiesMinusBtn")) {
-        if (curQuantity == 1) return;
-        addToCartBtn.classList.remove("preventClicked");
-        addToCartBtn.innerHTML = "加入購物車";
-        curQuantity -= 1;
-        quantitiesValue.value = curQuantity;
-      }
-    }
+  if (curStockIndex === -1) return;
+  const curProductStockQty = stockList[curStockIndex].stock;
+  if (stockList[curStockIndex].stock === 0) {
+    curQuantity = 0;
+    quantitiesValue.value = 0;
+    return;
   } else {
-    if (e.target.classList.contains("btn")) {
-      alert("請選擇您要的款式");
+    if (e.target.classList.contains("quantitiesPlusBtn")) {
+      if (curQuantity === curProductStockQty) return;
+      addToCartBtn.classList.remove("preventClicked");
+      curQuantity += 1;
+      quantitiesValue.value = curQuantity;
+    }
+    if (e.target.classList.contains("quantitiesMinusBtn")) {
+      if (curQuantity === 1) return;
+      addToCartBtn.classList.remove("preventClicked");
+      curQuantity -= 1;
+      quantitiesValue.value = curQuantity;
     }
   }
 });
 
 addToCartBtn.addEventListener("click", () => {
   const curStockIndex = stockList.findIndex(getCurStockList);
-  if (curStockIndex == -1) {
+  if (curStockIndex === -1) {
     alert("請選擇您要的款式");
-  } else if (stockList[curStockIndex].stock == 0) {
+    return;
+  } else if (stockList[curStockIndex].stock === 0) {
     alert("售完，補貨中！");
-  } else {
-    if (curQuantity == 0) return;
-    addToCartFunc();
+    return;
+  } else if (curQuantity === 0) {
+    return;
   }
+  addToCartFunc();
 });
 
 const addToCartFunc = () => {
@@ -194,7 +186,7 @@ const addToCartFunc = () => {
     stock: curProductStockQty
   };
   let cartArr = [];
-  if (localStorage.getItem("cart") == "") {
+  if (localStorage.getItem("cart") === "") {
     cartArr.push(dataOfProduct);
     localStorage.cart = JSON.stringify(cartArr);
   } else {
@@ -206,12 +198,12 @@ const addToCartFunc = () => {
         cartArr.size == curSize
       );
     });
-    if (cartIndex == -1) {
+    if (cartIndex === -1) {
       cartArr.push(dataOfProduct);
     } else {
       if (curQuantity > curProductStockQty - cartArr[cartIndex].qty) {
         addToCartBtn.classList.add("preventClicked");
-        addToCartBtn.innerHTML = `剩餘數量：${curProductStockQty -
+        addToCartBtn.textContent = `剩餘數量：${curProductStockQty -
           cartArr[cartIndex].qty}`;
         return;
       }
@@ -219,8 +211,8 @@ const addToCartFunc = () => {
     }
     localStorage.cart = JSON.stringify(cartArr);
   }
-  numberInCart.forEach(e => e.classList.remove("hidden"));
-  numberInCart.forEach(
-    e => (e.innerHTML = JSON.parse(localStorage.cart).length)
-  );
+  numberInCart.forEach(e => {
+    e.classList.remove("hidden");
+    e.textContent = JSON.parse(localStorage.cart).length;
+  });
 };
